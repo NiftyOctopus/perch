@@ -7,6 +7,7 @@
         <nav>
             <RouterLink to='/'>Home</RouterLink>
             <RouterLink to='/about'>About</RouterLink>
+            <RouterLink to='/recent'>Recent Purchases</RouterLink>
         </nav>
     </header>
 
