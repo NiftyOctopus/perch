@@ -5,7 +5,7 @@
     onMounted(() => getPurchases())
 
     async function getPurchases() {
-        const res    = await fetch('http://192.168.1.182/boh/purchases/recent')
+        const res    = await fetch('http://192.168.1.182:81/purchases/recent')
         recent.value = await res.json()
     }
 </script>
