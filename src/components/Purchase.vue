@@ -5,6 +5,7 @@
 <template>
     <div>
         <span>{{ purchase.amount }}</span>
+        <span>{{ purchase.category }}</span>
         <span>{{ purchase.desc }}</span>
     </div>
 </template>

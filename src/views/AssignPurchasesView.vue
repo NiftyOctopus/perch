@@ -14,8 +14,27 @@
     onMounted(() => getPurchases())
 
     async function getPurchases() {
-        const res    = await fetch('http://192.168.1.182:81/purchases/unassigned')
+        const dev  = 'http://127.0.0.1:5000'
+        const prod = 'http://192.168.1.182:81'
+        const res  = await fetch(prod + '/purchases/unassigned')
         unassigned.value = await res.json()
+    }
+
+    async function assignPurchase(purchase) {
+        const dev  = 'http://127.0.0.1:5000'
+        const prod = 'http://192.168.1.182:81'
+        
+        const options = {
+            method: 'POST',
+            headers: {
+                'Accept':       'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ category: 'Restaurants' })
+        }
+
+        const res = await fetch(prod + '/purchases/' + purchase.id + '/assign', options)
+        console.log(await res.json())
     }
 </script>
 
@@ -29,6 +48,7 @@
             v-for='group in unassigned'
             :key='group.date'
             :group='group'
+            @select='assignPurchase'
         />
     </div>
 </template>

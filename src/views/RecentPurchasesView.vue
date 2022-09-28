@@ -6,7 +6,10 @@
     onMounted(() => getPurchases())
 
     async function getPurchases() {
-        const res    = await fetch('http://192.168.1.182:81/purchases/recent')
+        const dev  = 'http://127.0.0.1:5000'
+        const prod = 'http://192.168.1.182:81'
+
+        const res    = await fetch(prod + '/purchases/recent')
         recent.value = await res.json()
     }
 </script>
