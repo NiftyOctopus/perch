@@ -30,7 +30,7 @@
                 'Accept':       'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ category: 'Restaurants' })
+            body: JSON.stringify({ category: category.value })
         }
 
         const res = await fetch(prod + '/purchases/' + purchase.id + '/assign', options)
