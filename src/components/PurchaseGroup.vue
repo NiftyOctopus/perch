@@ -24,4 +24,8 @@
         flex-direction: column;
         gap: 0.5em;
     }
+
+    .date {
+        font-size: 0.75em;
+    }
 </style>
