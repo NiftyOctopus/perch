@@ -26,6 +26,7 @@
         display: flex;
         justify-content: center;
         gap: 0.5em;
+        max-width: 95vw;
     }
 
     .selected {
