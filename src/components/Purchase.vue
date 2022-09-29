@@ -3,15 +3,39 @@
 </script>
 
 <template>
-    <div>
-        <span>{{ purchase.amount }}</span>
-        <span>{{ purchase.category }}</span>
-        <span>{{ purchase.desc }}</span>
+    <div class='purchase'>
+        <div class='amount'>{{ purchase.amount }}</div>
+
+        <div class='details'>
+            <div class='desc'>{{ purchase.desc }}</div>
+            <div class='category'>{{ purchase.category }}</div>
+            
+        </div>
     </div>
 </template>
 
 <style scoped>
-    div {
-        border: 1px dashed gray;
+    .purchase {
+        padding: 0.2em;
+        border: 1px solid lightblue;
+        display: flex;
+        gap: 0.5em;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+
+
+    .amount {
+        flex-basis: 5em;
+        text-align: right;
+    }
+
+    .category {
+        font-size: 0.75em;
     }
 </style>

@@ -8,19 +8,31 @@
 </script>
 
 <template>
-    <div
-        v-for='option in options'
-        :key='option'
-        :option='option'
-        @click='handleSelect(option)'
-        :class="option === selected ? 'selected' : ''">
+    <div class='select'>
+        <div
+            v-for='option in options'
+            :key='option'
+            :option='option'
+            @click='handleSelect(option)'
+            :class="option === selected ? 'selected' : ''">
 
-        <span>{{ option }}</span>
+            <div class='option'>{{ option }}</div>
+        </div>
     </div>
 </template>
 
 <style scoped>
+    .select {
+        display: flex;
+        justify-content: center;
+        gap: 0.5em;
+    }
+
     .selected {
-        border: 1px dashed red;
+        background-color: lightblue;
+    }
+
+    .option {
+        border: 1px solid gray;
     }
 </style>

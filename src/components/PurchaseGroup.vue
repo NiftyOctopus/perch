@@ -5,12 +5,23 @@
 </script>
 
 <template>
-    <div class='date'>{{ group.date }}</div>
+    <div class='group'>
+        <div class='date'>{{ group.date }}</div>
 
-    <Purchase
-        v-for='purchase in group.purchases'
-        :key='purchase.id'
-        :purchase='purchase'
-        @click="emit('select', { ...purchase })"
-    />
+        <Purchase
+            v-for='purchase in group.purchases'
+            :key='purchase.id'
+            :purchase='purchase'
+            @click="emit('select', { ...purchase })"
+        />
+    </div>
 </template>
+
+<style scoped>
+    .group {
+        width: 25em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+</style>
