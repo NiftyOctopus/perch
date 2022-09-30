@@ -16,14 +16,16 @@
 
 
 <template>
-    <h1>Recent Purchases</h1>
+    <div class='view'>
+        <h3>Recent Purchases</h3>
 
-    <div id='results'>
-        <PurchaseGroup
-            v-for='group in recent'
-            :key='group.date'
-            :group='group'
-        />
+        <div id='results'>
+            <PurchaseGroup
+                v-for='group in recent'
+                :key='group.date'
+                :group='group'
+            />
+        </div>
     </div>
 </template>
 
@@ -34,5 +36,6 @@
         flex-direction: column;
         align-items:    center;
         gap: 1em;
+        padding: 1em 0;
     }
 </style>

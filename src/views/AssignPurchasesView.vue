@@ -61,16 +61,18 @@
 
 
 <template>
-    <h1>Assign Purchases</h1>
-    <Select :options='cats' @select='selectCategory' :selected='category' />
+    <div class='view'>
+        <h3>Assign Purchases</h3>
+        <Select :options='cats' @select='selectCategory' :selected='category' />
 
-    <div id='results'>
-        <PurchaseGroup
-            v-for='group in purchases'
-            :key='group.date'
-            :group='group'
-            @select='assignPurchase'
-        />
+        <div id='results'>
+            <PurchaseGroup
+                v-for='group in purchases'
+                :key='group.date'
+                :group='group'
+                @select='assignPurchase'
+            />
+        </div>
     </div>
 </template>
 
@@ -81,5 +83,6 @@
         flex-direction: column;
         align-items:    center;
         gap: 1em;
+        padding: 1em 0;
     }
 </style>

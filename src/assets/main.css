@@ -1,2 +1,11 @@
-@import './base.css';
 
+body {
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.view {
+    border: 2px dashed green;
+}

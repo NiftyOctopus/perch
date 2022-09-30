@@ -24,9 +24,11 @@
 <style scoped>
     .select {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 0.5em;
-        max-width: 95vw;
+        padding: 0.5em;
+        border: 1px dashed blue;
     }
 
     .selected {
