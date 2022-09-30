@@ -27,7 +27,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 0.5em;
-        padding: 0.5em;
+        padding: 0.5em 0;
         border: 1px dashed blue;
     }
 

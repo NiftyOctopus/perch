@@ -20,12 +20,13 @@
 <style scoped>
     .group {
         width: 25em;
+        max-width: 95vw;
         display: flex;
         flex-direction: column;
         gap: 0.5em;
     }
 
     .date {
-        font-size: 0.75em;
+        font-size: 0.8em;
     }
 </style>

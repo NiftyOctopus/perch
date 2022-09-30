@@ -31,11 +31,11 @@
 
 
     .amount {
-        flex-basis: 5em;
+        flex-basis: 4em;
         text-align: right;
     }
 
     .category {
-        font-size: 0.75em;
+        font-size: 0.8em;
     }
 </style>
