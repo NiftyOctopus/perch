@@ -3,7 +3,7 @@
     import PurchaseGroup from '../components/PurchaseGroup.vue'
     import Select        from '../components/Select.vue'
 
-    const cats = ['Bessie', 'Gaming', 'Gas', 'Gifts', 'Groceries', 'Household', 'Medical', 'Other', 'Restaurants', 'Rides', 'Streaming', 'Trains']
+    const cats = ['Bessie', 'Fun', 'Gaming', 'Gas', 'Gifts', 'Groceries', 'Household', 'Medical', 'Other', 'Restaurants', 'Rides', 'Streaming', 'Trains']
     const category = ref()
 
     function selectCategory(cat) {
