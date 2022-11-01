@@ -10,6 +10,13 @@
         category.value = cat
     }
 
+    const people = ['Shared', 'Bryan', 'Reyn']
+    const owner = ref('Shared')
+
+    function selectOwner(person) {
+        owner.value = person
+    }
+
     const purchases = ref([])
     onMounted(() => getPurchases())
 
@@ -22,6 +29,9 @@
     }
 
     async function assignPurchase(purchase) {
+        if(!owner.value) return
+        if(!category.value && !purchase.category) return
+
         const dev  = 'http://127.0.0.1:5000'
         const prod = 'http://192.168.1.182:81'
         
@@ -31,7 +41,10 @@
                 'Accept':       'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ category: category.value })
+            body: JSON.stringify({
+                category: category.value,
+                owner:    owner.value
+            })
         }
 
         const res = await fetch(prod + '/purchases/' + purchase.id + '/assign', options)
@@ -64,6 +77,7 @@
     <div class='view'>
         <h3>Assign Purchases</h3>
         <Select :options='cats' @select='selectCategory' :selected='category' />
+        <Select :options='people' @select='selectOwner' :selected='owner' />
 
         <div id='results'>
             <PurchaseGroup

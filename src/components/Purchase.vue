@@ -8,8 +8,12 @@
 
         <div class='details'>
             <div class='desc'>{{ purchase.desc }}</div>
-            <div class='category'>{{ purchase.category }}</div>
-            
+            <div class='category'>
+                <span>{{ purchase.category }} </span>
+                <span v-if="purchase.owner && purchase.owner !== 'Shared'">
+                    @{{ purchase.owner }}
+                </span>
+            </div>
         </div>
     </div>
 </template>
