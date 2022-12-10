@@ -4,9 +4,10 @@
     import Select        from '../components/Select.vue'
 
     const cats = [
-        'Bessie', 'Books', 'Cosmetics', 'Fun', 'Gaming', 'Gas', 
-        'Gifts', 'Groceries', 'Household', 'Medical', 'Other', 
-        'Restaurants', 'Rides', 'Selfcare', 'Streaming', 'Trains', 'Work'
+        'Bessie', 'Books', 'Cafe', 'Clothing', 'Cosmetics',
+        'Donations', 'Fun', 'Gaming', 'Gas', 'Gifts',
+        'Groceries', 'Household', 'Medical', 'Other', 'Restaurants',
+        'Rides', 'Selfcare', 'Streaming', 'Trains', 'Work'
     ]
     const category = ref()
 
