@@ -13,6 +13,12 @@
                 <span v-if="purchase.owner && purchase.owner !== 'Shared'">
                     @{{ purchase.owner }}
                 </span>
+                
+                <template v-if='purchase.items'>
+                    <div v-for='item in purchase.items' :key='item'>
+                        {{ item.substring(0, 70) }}...
+                    </div>
+                </template>
             </div>
         </div>
     </div>
